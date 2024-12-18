@@ -5,10 +5,11 @@ rh_HDPE = 960
 OD = 2300/1000
 t_HDPE = 88.5/1000
 CA = 0
-V_c = 1.04
+V_c = 3.5
 rh_c = 2400
-rh_cont = 0
+rh_cont = 1100
 gamma_w = 1.1
+
 rh_seawater = 1025
 
 g= 9.81
@@ -35,16 +36,16 @@ V_ID = A_ID * 1
 print("V_ID",V_ID)
 
 A_t = round((A_OD - A_ID ),3)
-print("A_t)",A_t)
+print("A_t :",A_t)
 
 V_t= round((V_OD - V_ID ),3)
-print("V_t",V_t)
+print("V_t :",V_t)
 
 M_pipe = round((A_t * rh_HDPE ),3)
 print("M_pipe",M_pipe)
 
-M_seawater = A_ID * rh_cont
-print("M_seawater",M_seawater)
+M_content = A_ID * rh_cont
+print("M_content",M_content)
 
 B_pipe = round((A_OD * rh_seawater),0)
 print("B_pipe",B_pipe)
@@ -58,13 +59,13 @@ print("M_c",M_c)
 B_c = (M_c*rh_seawater)/rh_c
 print("B_c",B_c)
 
-W_p = M_pipe - B_pipe
+W_p = (M_pipe - B_pipe) 
 print( "W_p",W_p)
 
 W_c = M_c - B_c
 print("W_c",W_c)
 
-W_s = W_p + W_c
+W_s = W_p + W_c + M_content
 print( "W_s",W_s)
 
 SG = ((B_pipe * g + W_s *g)/B_pipe*g)/100
@@ -74,7 +75,7 @@ UC = gamma_w/SG
 print(UC)
 
 if UC<=1:
-    print("SINK")
+    print("STABLE")
 
 else:
-    print("FLOAT")
+    print("NOT STABLE")

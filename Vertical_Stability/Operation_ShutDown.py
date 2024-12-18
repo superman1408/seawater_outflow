@@ -14,40 +14,40 @@ rh_seawater = 1025
 
 g= 9.81
 
-ID = (OD - 2* t_HDPE)*1000
+ID = round((OD - 2* t_HDPE),3)
 
-print(ID)
+print("ID : ",ID)
 
 # ---------------------------------Calculation------------------------------------
 
 
 print(math.pi)
 
-A_OD = math.pi * (OD*OD)/4 
+A_OD = round((math.pi * (OD*OD)/4),3)
 print("A_OD",A_OD)
 
 V_OD = A_OD * 1
 print("V_OD",V_OD)
 
-A_ID = (math.pi * ((ID**2)/4)/1000)/1000
+A_ID = round((math.pi * ((ID**2)/4)),3)
 print("A_ID",A_ID)
 
 V_ID = A_ID * 1 
 print("V_ID",V_ID)
 
-A_t = A_OD - A_ID 
-print("A_t)",A_t)
+A_t = round((A_OD - A_ID ),3)
+print("A_t :",A_t)
 
-V_t= V_OD - V_ID 
-print("V_t",V_t)
+V_t= round((V_OD - V_ID ),3)
+print("V_t :",V_t)
 
-M_pipe = A_t * rh_HDPE 
+M_pipe = round((A_t * rh_HDPE ),3)
 print("M_pipe",M_pipe)
 
 M_seawater = A_ID * rh_cont
 print("M_seawater",M_seawater)
 
-B_pipe = A_OD * rh_seawater
+B_pipe = round((A_OD * rh_seawater),0)
 print("B_pipe",B_pipe)
 
 A_c = V_c 
