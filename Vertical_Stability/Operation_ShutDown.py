@@ -50,10 +50,10 @@ print("M_seawater",M_seawater)
 B_pipe = round((A_OD * rh_seawater),0)
 print("B_pipe",B_pipe)
 
-A_c = V_c 
-print("A_c",A_c)
+# A_c = V_c 
+# print("A_c",A_c)
 
-M_c = rh_c * A_c
+M_c = rh_c * V_c
 print("M_c",M_c)
 
 B_c = (M_c*rh_seawater)/rh_c
