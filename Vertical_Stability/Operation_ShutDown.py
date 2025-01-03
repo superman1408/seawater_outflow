@@ -68,10 +68,10 @@ print("W_c",W_c)
 W_s = W_p + W_c
 print( "W_s",W_s)
 
-SG = ((B_pipe * g + W_s *g)/B_pipe*g)/100
+SG = round((((B_pipe * g + W_s *g)/B_pipe*g)/100),3)
 print("SG",SG)
 
-UC = gamma_w/SG
+UC = round((gamma_w/SG),3)
 print(UC)
 
 if UC<=1:
