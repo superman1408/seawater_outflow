@@ -1,0 +1,20 @@
+# ----------------------------- INPUTS -----------------------------------
+rho_HDPE = 960
+OD = 2.3
+t_cc = 0.55
+t_HDPE = 88.5
+Vc = 3.5
+rho_c = 2400
+t_mg = 0
+rho_mg = 0
+D = 3.4
+rho_cont = 0
+gamma_w = 1.1
+rho_seawater = 1025
+g = 9.807
+Hs = 3.5
+Tp = 13
+d = 10.97
+teta = 90
+z_r = 3
+gamma_s = 13.5
