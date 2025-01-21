@@ -61,14 +61,14 @@ print("Data_extracted_for_below_figure_2 ",Data_extracted_for_below_figure_2)
 
 # ---------------------------------------------------- Data_extracted_from_figure_3_2 ------------------------------------------------
 
-Spectrally_Derived_mean_zero_Up_crossing_period = Reference_Period_Tn/Spectral_peak_period_Tp
-print("Spectrally_Derived_mean_zero_Up_crossing_period  " , Spectrally_Derived_mean_zero_Up_crossing_period)
+Spectrally_Derived_mean_zero_Up_crossing_period_tn_tp = Reference_Period_Tn/Spectral_peak_period_Tp
+print("Spectrally_Derived_mean_zero_Up_crossing_period tn/tp " , Spectrally_Derived_mean_zero_Up_crossing_period_tn_tp)
 
 Mean_zero_up_crossing_period_at_seabed_level_Tu = 0.8415 * Spectral_peak_period_Tp
 print("Mean_zero_up_crossing_period_at_seabed_level_Tu   ", Mean_zero_up_crossing_period_at_seabed_level_Tu)
 
-Ratio_of_mean_zero_up_crossing_period_to_peak_wave_period = Mean_zero_up_crossing_period_at_seabed_level_Tu/Spectral_peak_period_Tp
-print("Ratio_of_mean_zero_up_crossing_period_to_peak_wave_period ",Ratio_of_mean_zero_up_crossing_period_to_peak_wave_period)
+Ratio_of_mean_zero_up_crossing_period_to_peak_wave_period_Tu_Tp = Mean_zero_up_crossing_period_at_seabed_level_Tu/Spectral_peak_period_Tp
+print("Ratio_of_mean_zero_up_crossing_period_to_peak_wave_period_Tu/Tp ",Ratio_of_mean_zero_up_crossing_period_to_peak_wave_period_Tu_Tp)
 
 # ------------------------------------------------------Input -----------------------------------------------------------------------
 
@@ -78,7 +78,7 @@ Angle_btw_wave_and_pipeline_headings_teta_w = 90
 
 # -----------------------------------------------------Calculation-------------------------------------------------------------------
 Significant_wave_induced_water_particle_velocity_for_design_UsD  = Reduction_factor_due_to_spectral_directionally_and_spreading_R_D * Significant_wave_induced_water_particle_velocity_Us
-print("Significant_wave_induced_water_particle_velocity_Us ",Significant_wave_induced_water_particle_velocity_Us)
+print("Significant_wave_induced_water_particle_velocity_for_design_UsD ",Significant_wave_induced_water_particle_velocity_for_design_UsD)
 
 
 # ------------------------------------------------------Current Velocity--------------------------------------------------------------
@@ -164,7 +164,7 @@ Submerged_Wt_of_pipe_Wp = Mass_of_HDPE_pipe_Mpipe - Buoyancy_for_pipe_Bpipe
 print("Submerged_Wt_of_pipe_Wp", Submerged_Wt_of_pipe_Wp)
 
 Submerged_Wt_of_concrete_Wc = Mass_of_concrete_Mc - Buoyancy_for_concrete_Bc
-print(Submerged_Wt_of_concrete_Wc)
+print("Submerged_Wt_of_concrete_Wc", Submerged_Wt_of_concrete_Wc)
 
 
 # ---------------------------------------------------------------------input ------------------------------------------------------------------------------------
@@ -188,10 +188,10 @@ print("Load_reduction_factor_due_to_trenching_in_horizontal_direction_r_tr_y", L
 Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z = 1.0 - 0.14 * (Trench_wall_angle_teta_t - 5)**0.43 * (Trench_Depth_zt/Hydodynamic_diameter_D)**0.46
 print("Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z", Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z)
 
-Appendix_A_Ks = (Sunbmerged_unit_soil_weight_for_sand_gamma_s * (Hydodynamic_diameter_D**2))/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws
+Appendix_A_Ks = ((Sunbmerged_unit_soil_weight_for_sand_gamma_s * (Hydodynamic_diameter_D**2))/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws) * 100
 print("Appendix_A_Ks",Appendix_A_Ks)
 
-Initial_Penetration_Zpi = 0.037 * Hydodynamic_diameter_D * (Appendix_A_Ks)**-2/3
+Initial_Penetration_Zpi = 0.037 * Hydodynamic_diameter_D * (Appendix_A_Ks)**-2/3 *1000 * 100
 print("Initial_Penetration_Zpi", Initial_Penetration_Zpi)
 
 
