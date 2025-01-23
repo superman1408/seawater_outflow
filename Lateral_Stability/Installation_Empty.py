@@ -59,7 +59,7 @@ print("Significant_wave_induced_water_particle_velocity_Us ",Significant_wave_in
 Data_extracted_for_below_figure_2 = (Significant_wave_induced_water_particle_velocity_Us * Reference_Period_Tn)/Significant_wave_height_Hs
 print("Data_extracted_for_below_figure_2 ",Data_extracted_for_below_figure_2)
 
-# ---------------------------------------------------- Data_extracted_from_figure_3_2 ------------------------------------------------
+# ------------------------------------------------------------- Data_extracted_from_figure_3_2 ---------------------------------------------------------------
 
 Spectrally_Derived_mean_zero_Up_crossing_period_tn_tp = Reference_Period_Tn/Spectral_peak_period_Tp
 print("Spectrally_Derived_mean_zero_Up_crossing_period tn/tp " , Spectrally_Derived_mean_zero_Up_crossing_period_tn_tp)
@@ -70,7 +70,7 @@ print("Mean_zero_up_crossing_period_at_seabed_level_Tu   ", Mean_zero_up_crossin
 Ratio_of_mean_zero_up_crossing_period_to_peak_wave_period_Tu_Tp = Mean_zero_up_crossing_period_at_seabed_level_Tu/Spectral_peak_period_Tp
 print("Ratio_of_mean_zero_up_crossing_period_to_peak_wave_period_Tu/Tp ",Ratio_of_mean_zero_up_crossing_period_to_peak_wave_period_Tu_Tp)
 
-# ------------------------------------------------------Input -----------------------------------------------------------------------
+# ------------------------------------------------------------------------Input ----------------------------------------------------------------------------------
 
 Reduction_factor_due_to_spectral_directionally_and_spreading_R_D = 1
 Angle_btw_wave_and_pipeline_headings_teta_w = 90
@@ -81,7 +81,7 @@ Significant_wave_induced_water_particle_velocity_for_design_UsD  = Reduction_fac
 print("Significant_wave_induced_water_particle_velocity_for_design_UsD ",Significant_wave_induced_water_particle_velocity_for_design_UsD)
 
 
-# ------------------------------------------------------Current Velocity--------------------------------------------------------------
+# -------------------------------------------------------------------------------Current Velocity--------------------------------------------------------------
 # ----------------------------------------------------input---------------------------------------------------------------------------
 
 Current_velocity_a_distance_Zr_above_the_seabed_Vzr = 0.46
@@ -226,7 +226,7 @@ print(Load_Reduction_Factors_in_Vertical_Direction_r_pen_z)
 Load_Reduction_Factors_in_Vertical_Direction_r_totz = Load_Reduction_Factors_in_Vertical_Direction_r_pen_z * Load_Reduction_Factors_in_Horizontal_Direction_r_perm_z * Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z
 print("Load_Reduction_Factors_in_Vertical_Direction_r_totz", Load_Reduction_Factors_in_Vertical_Direction_r_totz)
 
-# --------------------------------------------------------- Loads ----------------------------------------------------------------------
+# ---------------------------------------------------------------------------- Loads ------------------------------------------------------------------------------
 
 
 Safety_factor_for_weight_gamma_SC = 1.1
@@ -250,7 +250,7 @@ print("Breakout_passive_resistance_F_R_brk", Breakout_passive_resistance_F_R_brk
 
 
 # Lateral Stability criteria
-# -----------------------------------Lateral Stability Design Criteria (Section 4.5.2 , DNV-RP-F109)----------------------------------------
+# ---------------------------------------------Lateral Stability Design Criteria (Section 4.5.2 , DNV-RP-F109)----------------------------------------------------
 
 print(Safety_factor_for_weight_gamma_SC * ((Peak_Horizontal_Load_Fy + Friction_coefficient_for_pipe_soil_interface_Mu * Peak_Vertical_Load_Fz)/(Friction_coefficient_for_pipe_soil_interface_Mu * Total_Submerged_Wt_pipe_concrete_waterfilled_Ws + Breakout_passive_resistance_F_R_brk)))
 
