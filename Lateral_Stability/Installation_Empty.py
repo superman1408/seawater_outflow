@@ -260,7 +260,7 @@ print(round((Safety_factor_for_weight_gamma_SC * (Peak_Vertical_Load_Fz/Total_Su
 
 if Safety_factor_for_weight_gamma_SC * ((Peak_Horizontal_Load_Fy + Friction_coefficient_for_pipe_soil_interface_Mu * Peak_Vertical_Load_Fz)/(Friction_coefficient_for_pipe_soil_interface_Mu * Total_Submerged_Wt_pipe_concrete_waterfilled_Ws + Breakout_passive_resistance_F_R_brk)) <= 1 :
     LSC_min =  print("SATISFIED")
-    if (round(Safety_factor_for_weight_gamma_SC * (Peak_Vertical_Load_Fz/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws)),3) <= 1:
+    if (Safety_factor_for_weight_gamma_SC * (Peak_Vertical_Load_Fz/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws)) <= 1:
         print("SATISFIED")
 
     else:
