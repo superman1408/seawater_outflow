@@ -49,7 +49,7 @@ else :
 
 print("Peakedness_Parameter_gamma: ",Peakedness_Parameter_gamma)
 
-Reference_Period_Tn = math.sqrt(Water_depth_d/gravity_g)
+Reference_Period_Tn = round((math.sqrt(Water_depth_d/gravity_g)),3)
 print("Reference_Period_Tn: ",Reference_Period_Tn)
 
 
@@ -188,7 +188,7 @@ print("Load_reduction_factor_due_to_trenching_in_horizontal_direction_r_tr_y : "
 Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z = round((1.0 - 0.14 * (Trench_wall_angle_teta_t - 5)**0.43 * (Trench_Depth_zt/Hydodynamic_diameter_D)**0.46),3)
 print("Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z : ", Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z)
 
-Appendix_A_Ks = round((((Sunbmerged_unit_soil_weight_for_sand_gamma_s * (Hydodynamic_diameter_D**2))/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws) * 100))
+Appendix_A_Ks = round((((Sunbmerged_unit_soil_weight_for_sand_gamma_s * (Hydodynamic_diameter_D**2))/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws) * 100),3)
 print("Appendix_A_Ks : ",Appendix_A_Ks)
 
 Initial_Penetration_Zpi = round((0.037 * Hydodynamic_diameter_D * (Appendix_A_Ks)**-2/3 *1000 * 100),3)
