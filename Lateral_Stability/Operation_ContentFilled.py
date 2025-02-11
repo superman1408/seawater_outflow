@@ -11,7 +11,7 @@ Concrete_density_rho_c = 2400
 Marine_growth_Thickness_t_mg = 0
 Marine_growth_density_rho_mg = 0
 
-Content_density_seawater_rho_cont = 0
+Content_density_seawater_rho_cont = 1100
 Safety_factor_for_weight_gamma_w = 1.1
 Seawater_density_rho_seawater = 1025
 gravity_g = 9.807
