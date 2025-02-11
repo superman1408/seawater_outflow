@@ -11,7 +11,7 @@ Concrete_density_rho_c = 2400
 Marine_growth_Thickness_t_mg = 0
 Marine_growth_density_rho_mg = 0
 
-Content_density_seawater_rho_cont = 0
+Content_density_seawater_rho_cont = 1100
 Safety_factor_for_weight_gamma_w = 1.1
 Seawater_density_rho_seawater = 1025
 gravity_g = 9.807
@@ -174,6 +174,9 @@ Additional_submerged_weight_W_add = 0
 Total_Submerged_Wt_pipe_concrete_waterfilled_Ws = round((Additional_submerged_weight_W_add + Submerged_Wt_of_pipe_Wp + Submerged_Wt_of_concrete_Wc + Content_mass_inside_pipe_Mseawater),3)
 print("Total_Submerged_Wt_pipe_concrete_waterfilled_Ws : ", Total_Submerged_Wt_pipe_concrete_waterfilled_Ws)
 
+Total_Submerged_Wt_pipe_concrete_waterfilled_Ws1 = (Total_Submerged_Wt_pipe_concrete_waterfilled_Ws * gravity_g)/1000
+print("Total_Submerged_Wt_pipe_concrete_waterfilled_Ws1", Total_Submerged_Wt_pipe_concrete_waterfilled_Ws1)
+
 
 
 # --------------------------------------------------------------------------Load Reduction-------------------------------------------------------------------------------
@@ -188,10 +191,10 @@ print("Load_reduction_factor_due_to_trenching_in_horizontal_direction_r_tr_y : "
 Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z = round((1.0 - 0.14 * (Trench_wall_angle_teta_t - 5)**0.43 * (Trench_Depth_zt/Hydodynamic_diameter_D)**0.46),3)
 print("Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z : ", Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z)
 
-Appendix_A_Ks = round((((Sunbmerged_unit_soil_weight_for_sand_gamma_s * (Hydodynamic_diameter_D**2))/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws) * 100),3)
+Appendix_A_Ks = round((((Sunbmerged_unit_soil_weight_for_sand_gamma_s * (Hydodynamic_diameter_D**2))/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws1) ),3)
 print("Appendix_A_Ks : ",Appendix_A_Ks)
 
-Initial_Penetration_Zpi = round((0.037 * Hydodynamic_diameter_D * (Appendix_A_Ks)**-2/3 *1000 * 100),3)
+Initial_Penetration_Zpi = round(((0.037 * Hydodynamic_diameter_D * (Appendix_A_Ks)**(-2/3 )*1000 )/1000),3)
 print("Initial_Penetration_Zpi : ", Initial_Penetration_Zpi)
 
 
@@ -218,12 +221,12 @@ elif (0.1 <= Initial_Penetration_Zpi/Hydodynamic_diameter_D <= 0.869) :
 elif (Initial_Penetration_Zpi > 0.869):
     Load_Reduction_Factors_in_Vertical_Direction_r_pen_z = 0
 
-print(Load_Reduction_Factors_in_Vertical_Direction_r_pen_z)
+print("Load_Reduction_Factors_in_Vertical_Direction_r_pen_z",Load_Reduction_Factors_in_Vertical_Direction_r_pen_z)
 
 
 
 
-Load_Reduction_Factors_in_Vertical_Direction_r_totz = round((Load_Reduction_Factors_in_Vertical_Direction_r_pen_z * Load_Reduction_Factors_in_Horizontal_Direction_r_perm_z * Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z))
+Load_Reduction_Factors_in_Vertical_Direction_r_totz = round((Load_Reduction_Factors_in_Vertical_Direction_r_pen_z * Load_Reduction_Factors_in_Horizontal_Direction_r_perm_z * Load_reduction_factor_due_to_trenching_in_vertical_direction_r_tr_z),3)
 print("Load_Reduction_Factors_in_Vertical_Direction_r_totz : ", Load_Reduction_Factors_in_Vertical_Direction_r_totz)
 
 # ---------------------------------------------------------------------------- Loads ------------------------------------------------------------------------------
@@ -231,7 +234,7 @@ print("Load_Reduction_Factors_in_Vertical_Direction_r_totz : ", Load_Reduction_F
 
 Safety_factor_for_weight_gamma_SC = 1.1
 
-Peak_Horizontal_Load_Fy = round(((Load_Reduction_Factors_in_Horizontal_Direction_r_toty * 0.5 * Seawater_density_rho_seawater * Hydodynamic_diameter_D * Peak_horizontal_load_coefficient_Cy*(Significant_wave_induced_water_particle_velocity_Us + Characteristic_current_induced_flow_velocity_at_pipeline_level_V)**2) / gravity_g),3)
+Peak_Horizontal_Load_Fy = round(((Load_Reduction_Factors_in_Horizontal_Direction_r_toty * 0.5 * Seawater_density_rho_seawater * Hydodynamic_diameter_D * Peak_horizontal_load_coefficient_Cy*(Significant_wave_induced_water_particle_velocity_Us + Characteristic_current_induced_flow_velocity_at_pipeline_level_V)**2)),3)
 print("Peak_Horizontal_Load_Fy : ",Peak_Horizontal_Load_Fy)
 
 
@@ -246,25 +249,25 @@ if Appendix_A_Ks <=20:
 else:
     Breakout_passive_resistance_F_R_brk = round((2 * (Initial_Penetration_Zpi/Hydodynamic_diameter_D)**1.25 * Sunbmerged_unit_soil_weight_for_sand_gamma_s * Hydodynamic_diameter_D**2),3)
 
-print("Breakout_passive_resistance_F_R_brk : ", Breakout_passive_resistance_F_R_brk) 
+print("Breakout_passive_resistance_F_R_brk : ", Breakout_passive_resistance_F_R_brk*1000) 
 
 
 # Lateral Stability criteria
 # ---------------------------------------------Lateral Stability Design Criteria (Section 4.5.2 , DNV-RP-F109)----------------------------------------------------
 
-print(round((Safety_factor_for_weight_gamma_SC * ((Peak_Horizontal_Load_Fy + Friction_coefficient_for_pipe_soil_interface_Mu * Peak_Vertical_Load_Fz)/(Friction_coefficient_for_pipe_soil_interface_Mu * Total_Submerged_Wt_pipe_concrete_waterfilled_Ws + Breakout_passive_resistance_F_R_brk))),3))
+print(Safety_factor_for_weight_gamma_SC * ((Peak_Horizontal_Load_Fy + Friction_coefficient_for_pipe_soil_interface_Mu * Peak_Vertical_Load_Fz)/(Friction_coefficient_for_pipe_soil_interface_Mu * Total_Submerged_Wt_pipe_concrete_waterfilled_Ws1 + Breakout_passive_resistance_F_R_brk))/1000)
 
 
-print(round((Safety_factor_for_weight_gamma_SC * (Peak_Vertical_Load_Fz/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws))),3)
+print(Safety_factor_for_weight_gamma_SC * (Peak_Vertical_Load_Fz/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws1)/1000)
 
 
-if Safety_factor_for_weight_gamma_SC * ((Peak_Horizontal_Load_Fy + Friction_coefficient_for_pipe_soil_interface_Mu * Peak_Vertical_Load_Fz)/(Friction_coefficient_for_pipe_soil_interface_Mu * Total_Submerged_Wt_pipe_concrete_waterfilled_Ws + Breakout_passive_resistance_F_R_brk)) <= 1 :
+if (Safety_factor_for_weight_gamma_SC * ((Peak_Horizontal_Load_Fy + Friction_coefficient_for_pipe_soil_interface_Mu * Peak_Vertical_Load_Fz)/(Friction_coefficient_for_pipe_soil_interface_Mu * Total_Submerged_Wt_pipe_concrete_waterfilled_Ws1 + Breakout_passive_resistance_F_R_brk)/1000)) <= 1 :
     LSC_min =  print("SATISFIED")
-    if (Safety_factor_for_weight_gamma_SC * (Peak_Vertical_Load_Fz/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws)) <= 1:
+    if ((Safety_factor_for_weight_gamma_SC * (Peak_Vertical_Load_Fz/Total_Submerged_Wt_pipe_concrete_waterfilled_Ws1))/1000) <= 1:
         print("SATISFIED")
 
     else:
-        print("NOT SATISFIED")
+        print("NOT SATISFIED Isme")
 
 else:
     print("NOT SATISFIED")
@@ -273,5 +276,5 @@ else:
 
 
 
-
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
 
