@@ -13,206 +13,216 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0">
+    <item row="0" column="0" colspan="2">
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
        <string/>
       </property>
-      <layout class="QGridLayout" name="gridLayout_24">
+      <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
         <widget class="QGroupBox" name="groupBox_2">
          <property name="title">
           <string/>
          </property>
-         <widget class="QWidget" name="">
-          <property name="geometry">
-           <rect>
-            <x>321</x>
-            <y>10</y>
-            <width>541</width>
-            <height>24</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_5">
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_3">
-             <item>
-              <widget class="QLabel" name="label_2">
-               <property name="text">
-                <string>Project Name:</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_38"/>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_4">
-             <item>
-              <widget class="QLabel" name="label_3">
-               <property name="text">
-                <string>Doc No. :</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLineEdit" name="lineEdit_39"/>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </widget>
-         <widget class="QWidget" name="">
-          <layout class="QHBoxLayout" name="horizontalLayout_6">
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_8">
-             <item>
-              <widget class="QLabel" name="selectCaselabel_2">
-               <property name="text">
-                <string>Select Case :</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QComboBox" name="selectCasecomboBox_2">
-               <item>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_6">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_8">
+              <item>
+               <widget class="QLabel" name="selectCaselabel_2">
                 <property name="text">
-                 <string>Installation </string>
+                 <string>Select Case :</string>
                 </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Operation</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-            </layout>
-           </item>
-           <item>
-            <layout class="QHBoxLayout" name="horizontalLayout_9">
-             <item>
-              <spacer name="horizontalSpacer_4">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <widget class="QLabel" name="label_5">
-               <property name="text">
-                <string>Select Case :</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QComboBox" name="comboBox_5">
-               <item>
-                <property name="text">
-                 <string>Empty</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Water Filled</string>
-                </property>
-               </item>
-              </widget>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_14">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_15">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_8">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_5">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>40</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout">
-               <item>
-                <spacer name="horizontalSpacer_7">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>40</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <widget class="QLabel" name="label">
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="selectCasecomboBox_2">
+                <item>
                  <property name="text">
-                  <string>Pipeline Grade:</string>
+                  <string>Installation </string>
                  </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QComboBox" name="comboBox"/>
-               </item>
-              </layout>
-             </item>
-            </layout>
-           </item>
-          </layout>
-         </widget>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Operation</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <item>
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>Select Case :</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboBox_5">
+                <item>
+                 <property name="text">
+                  <string>Empty</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Water Filled</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <item>
+                 <spacer name="horizontalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string>Pipeline Grade:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox"/>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_15">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_14">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_5">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <item>
+                 <widget class="QLabel" name="label_2">
+                  <property name="text">
+                   <string>Project Name:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_38"/>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <item>
+                 <widget class="QLabel" name="label_3">
+                  <property name="text">
+                   <string>Doc No. :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_39"/>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1" rowspan="2">
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>52</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="1" column="0">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>846</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
         </widget>
+       </item>
+       <item row="0" column="1" rowspan="4">
+        <spacer name="verticalSpacer_9">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>884</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item row="1" column="0">
         <widget class="QGroupBox" name="groupBox_3">
@@ -1317,23 +1327,10 @@
          </property>
         </spacer>
        </item>
-       <item row="1" column="1" rowspan="3">
-        <spacer name="verticalSpacer_9">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>884</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
       </layout>
      </widget>
     </item>
-    <item row="0" column="1">
+    <item row="0" column="2">
      <spacer name="verticalSpacer">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -1347,6 +1344,13 @@
      </spacer>
     </item>
     <item row="1" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>© 2025 Ashkam Energy Pvt. Ltd. All rights reserved.</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
      <spacer name="horizontalSpacer">
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
@@ -1395,6 +1399,7 @@
      <string>Help</string>
     </property>
     <addaction name="actionDocumentation"/>
+    <addaction name="actionWhat_s_New"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -1408,7 +1413,7 @@
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>C:/Users/ADITIKUMARI/.designer/backup</normaloff>C:/Users/ADITIKUMARI/.designer/backup</iconset>
+     <normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/open.gif</normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/open.gif</iconset>
    </property>
    <property name="text">
     <string>Open</string>
@@ -1421,6 +1426,10 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/save_as.gif</normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/save_as.gif</iconset>
+   </property>
    <property name="text">
     <string>Save As</string>
    </property>
@@ -1432,6 +1441,10 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/close.gif</normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/close.gif</iconset>
+   </property>
    <property name="text">
     <string>Exit</string>
    </property>
@@ -1440,6 +1453,10 @@
    </property>
   </action>
   <action name="actionReset">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/reset.gif</normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/reset.gif</iconset>
+   </property>
    <property name="text">
     <string>Reset</string>
    </property>
@@ -1448,13 +1465,30 @@
    </property>
   </action>
   <action name="actionGenerate_Report">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/report.gif</normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/report.gif</iconset>
+   </property>
    <property name="text">
     <string>Generate Report</string>
    </property>
   </action>
   <action name="actionDocumentation">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/document.png</normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/document.png</iconset>
+   </property>
    <property name="text">
     <string>Documentation</string>
+   </property>
+  </action>
+  <action name="actionWhat_s_New">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/What's new.gif</normaloff>C:/Users/Aditi kumari/OneDrive - Ashkam Energy Pvt Ltd/Desktop/assets/What's new.gif</iconset>
+   </property>
+   <property name="text">
+    <string>What's New</string>
    </property>
   </action>
  </widget>
