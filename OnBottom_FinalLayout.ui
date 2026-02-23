@@ -116,7 +116,33 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="comboBox"/>
+                 <widget class="QComboBox" name="comboBox">
+                  <item>
+                   <property name="text">
+                    <string>API 5L X52</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>API 5L X60</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>API 5L X65</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>API 5L X70</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>API 5L X80</string>
+                   </property>
+                  </item>
+                 </widget>
                 </item>
                </layout>
               </item>
