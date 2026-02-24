@@ -14,7 +14,10 @@
    <string>MainWindow</string>
   </property>
   <property name="autoFillBackground">
-   <bool>true</bool>
+   <bool>false</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color:qlineargradient(spread:pad, x1:0.028, y1:0.0455909, x2:0.841, y2:0.966364, stop:0 rgba(169, 237, 255, 107), stop:0.994318 rgba(253, 255, 218, 255));</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -26,6 +29,9 @@
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
         <widget class="QGroupBox" name="groupBox_2">
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
          <property name="title">
           <string/>
          </property>
@@ -35,14 +41,14 @@
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout_8">
               <item>
-               <widget class="QLabel" name="selectCaselabel_2">
+               <widget class="QLabel" name="selectCaselabel_1">
                 <property name="text">
                  <string>Select Case :</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="selectCasecomboBox_2">
+               <widget class="QComboBox" name="selectCasecomboBox_1">
                 <item>
                  <property name="text">
                   <string>Installation </string>
@@ -73,17 +79,22 @@
                </spacer>
               </item>
               <item>
-               <widget class="QLabel" name="label_5">
+               <widget class="QLabel" name="SelectCase_2">
                 <property name="text">
                  <string>Select Case :</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QComboBox" name="comboBox_5">
+               <widget class="QComboBox" name="SelectCasecomboBox_2">
                 <item>
                  <property name="text">
                   <string>Empty</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Shutdown</string>
                  </property>
                 </item>
                 <item>
@@ -109,14 +120,14 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QLabel" name="label">
+                 <widget class="QLabel" name="SelectCase_3">
                   <property name="text">
                    <string>Pipeline Grade:</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QComboBox" name="comboBox">
+                 <widget class="QComboBox" name="SelectCasecomboBox_3">
                   <item>
                    <property name="text">
                     <string>API 5L X52</string>
@@ -179,28 +190,28 @@
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_3">
                 <item>
-                 <widget class="QLabel" name="label_2">
+                 <widget class="QLabel" name="label_ProjectName">
                   <property name="text">
                    <string>Project Name:</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="lineEdit_38"/>
+                 <widget class="QLineEdit" name="lineEdit_ProjectName"/>
                 </item>
                </layout>
               </item>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_4">
                 <item>
-                 <widget class="QLabel" name="label_3">
+                 <widget class="QLabel" name="label_DocNo">
                   <property name="text">
                    <string>Doc No. :</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QLineEdit" name="lineEdit_39"/>
+                 <widget class="QLineEdit" name="lineEdit_DocNo"/>
                 </item>
                </layout>
               </item>
@@ -260,7 +271,7 @@
            <widget class="QWidget" name="widget" native="true">
             <layout class="QGridLayout" name="gridLayout_12">
              <item row="0" column="0">
-              <widget class="QLabel" name="label_42">
+              <widget class="QLabel" name="label_INPUT_Data">
                <property name="font">
                 <font>
                  <pointsize>12</pointsize>
@@ -415,7 +426,7 @@
                  <item row="0" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_48">
                    <item>
-                    <widget class="QLabel" name="rho_HDPE">
+                    <widget class="QLabel" name="rho_HDPE_label">
                      <property name="text">
                       <string>HDPE Density ρHDPE (kg/m3)</string>
                      </property>
@@ -644,7 +655,7 @@
            <widget class="QWidget" name="widget_2" native="true">
             <layout class="QGridLayout" name="gridLayout_16">
              <item row="0" column="0">
-              <widget class="QLabel" name="Calculations_label_53">
+              <widget class="QLabel" name="Label_OUTPUT">
                <property name="font">
                 <font>
                  <pointsize>12</pointsize>
@@ -653,7 +664,7 @@
                 </font>
                </property>
                <property name="text">
-                <string>Output</string>
+                <string> Result Terminal</string>
                </property>
               </widget>
              </item>
@@ -1120,19 +1131,6 @@
             </layout>
            </widget>
           </item>
-          <item row="1" column="1">
-           <spacer name="verticalSpacer_6">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>233</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
           <item row="2" column="0">
            <spacer name="horizontalSpacer_11">
             <property name="orientation">
@@ -1146,16 +1144,42 @@
             </property>
            </spacer>
           </item>
+          <item row="1" column="1">
+           <spacer name="verticalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>233</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
          </layout>
         </widget>
+       </item>
+       <item row="4" column="0">
+        <spacer name="horizontalSpacer_84">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>895</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item row="3" column="0">
         <widget class="QGroupBox" name="groupBox_5">
          <property name="title">
           <string/>
          </property>
-         <layout class="QGridLayout" name="gridLayout_23">
-          <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0" colspan="2">
            <widget class="QWidget" name="widget_3" native="true">
             <layout class="QGridLayout" name="gridLayout_21">
              <item row="1" column="0" rowspan="2">
@@ -1163,9 +1187,9 @@
                <item row="0" column="0">
                 <layout class="QHBoxLayout" name="horizontalLayout_70">
                  <item>
-                  <widget class="QLabel" name="UC_Check_label">
+                  <widget class="QLabel" name="Criteria1_label">
                    <property name="text">
-                    <string> UC Check       </string>
+                    <string> Criteria1  </string>
                    </property>
                   </widget>
                  </item>
@@ -1183,7 +1207,7 @@
                   </spacer>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="UC_Check_lineEdit"/>
+                  <widget class="QLineEdit" name="Criteria1_lineEdit"/>
                  </item>
                  <item>
                   <spacer name="horizontalSpacer_12">
@@ -1216,9 +1240,9 @@
                <item row="1" column="0">
                 <layout class="QHBoxLayout" name="horizontalLayout_71">
                  <item>
-                  <widget class="QLabel" name="Criteria_Check_label">
+                  <widget class="QLabel" name="Criteria2_label">
                    <property name="text">
-                    <string> Criteria Check</string>
+                    <string> Criteria 2 </string>
                    </property>
                   </widget>
                  </item>
@@ -1236,7 +1260,7 @@
                   </spacer>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="Criteria_Check_lineEdit"/>
+                  <widget class="QLineEdit" name="Criteria2_lineEdit"/>
                  </item>
                  <item>
                   <spacer name="horizontalSpacer_80">
@@ -1278,7 +1302,7 @@
                 </font>
                </property>
                <property name="text">
-                <string> Result Terminal</string>
+                <string>Checks</string>
                </property>
               </widget>
              </item>
@@ -1311,7 +1335,7 @@
             </layout>
            </widget>
           </item>
-          <item row="0" column="1">
+          <item row="0" column="2">
            <spacer name="verticalSpacer_8">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -1325,6 +1349,25 @@
            </spacer>
           </item>
           <item row="1" column="0">
+           <widget class="QLabel" name="label_checks">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>1000</width>
+              <height>501</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Lateral Stability Criteria : Not Satisfied</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
            <spacer name="horizontalSpacer_83">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
@@ -1339,19 +1382,6 @@
           </item>
          </layout>
         </widget>
-       </item>
-       <item row="4" column="0">
-        <spacer name="horizontalSpacer_84">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>895</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
        </item>
       </layout>
      </widget>
