@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1013</width>
+    <width>1010</width>
     <height>905</height>
    </rect>
   </property>
@@ -21,39 +21,6 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_11">
-    <item row="0" column="2">
-     <spacer name="verticalSpacer">
-      <property name="orientation">
-       <enum>Qt::Vertical</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>20</width>
-        <height>1012</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="1" column="0">
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>© 2026 Ashkam Energy Pvt. Ltd. All rights reserved.</string>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <spacer name="horizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>944</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
     <item row="0" column="0" colspan="2">
      <widget class="QGroupBox" name="groupBox">
       <property name="title">
@@ -334,7 +301,7 @@
                  <item row="0" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_75">
                    <item>
-                    <widget class="QLabel" name="ID_label_5">
+                    <widget class="QLabel" name="Hs_label">
                      <property name="text">
                       <string>Significant Wave Height Hs (m)  </string>
                      </property>
@@ -361,7 +328,7 @@
                  <item row="1" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_76">
                    <item>
-                    <widget class="QLabel" name="ID_label_6">
+                    <widget class="QLabel" name="Tp_label">
                      <property name="text">
                       <string>Spectral Peak Period Tp (s)  </string>
                      </property>
@@ -401,7 +368,7 @@
                  <item row="2" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_77">
                    <item>
-                    <widget class="QLabel" name="ID_label_7">
+                    <widget class="QLabel" name="d_label">
                      <property name="text">
                       <string>Water Depth d  (m)  </string>
                      </property>
@@ -441,7 +408,7 @@
                  <item row="3" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_79">
                    <item>
-                    <widget class="QLabel" name="ID_label_9">
+                    <widget class="QLabel" name="theta_label">
                      <property name="text">
                       <string>Related angle b/w pipeline &amp; current direction θ (°)  </string>
                      </property>
@@ -468,7 +435,7 @@
                  <item row="4" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_80">
                    <item>
-                    <widget class="QLabel" name="ID_label_10">
+                    <widget class="QLabel" name="zr_label">
                      <property name="text">
                       <string>Ref. measure height above the seabed zr (m)  </string>
                      </property>
@@ -495,7 +462,7 @@
                  <item row="5" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_81">
                    <item>
-                    <widget class="QLabel" name="ID_label_11">
+                    <widget class="QLabel" name="ys_label">
                      <property name="text">
                       <string>Submerged unit Soil Weight for Sand γs (kN/m3)  </string>
                      </property>
@@ -1471,20 +1438,6 @@
           <item row="0" column="0" colspan="2">
            <widget class="QWidget" name="widget_3" native="true">
             <layout class="QGridLayout" name="gridLayout">
-             <item row="0" column="0" colspan="2">
-              <widget class="QLabel" name="Result_label">
-               <property name="font">
-                <font>
-                 <pointsize>12</pointsize>
-                 <weight>75</weight>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>Checks</string>
-               </property>
-              </widget>
-             </item>
              <item row="1" column="0" rowspan="2">
               <layout class="QGridLayout" name="gridLayout_22">
                <item row="0" column="0">
@@ -1543,6 +1496,13 @@
                </item>
               </layout>
              </item>
+             <item row="2" column="2">
+              <widget class="QPushButton" name="pushButton">
+               <property name="text">
+                <string>Check</string>
+               </property>
+              </widget>
+             </item>
              <item row="2" column="1">
               <spacer name="horizontalSpacer_8">
                <property name="orientation">
@@ -1556,7 +1516,7 @@
                </property>
               </spacer>
              </item>
-             <item row="1" column="1">
+             <item row="1" column="1" colspan="2">
               <spacer name="verticalSpacer_7">
                <property name="orientation">
                 <enum>Qt::Vertical</enum>
@@ -1569,6 +1529,20 @@
                </property>
               </spacer>
              </item>
+             <item row="0" column="0" colspan="3">
+              <widget class="QLabel" name="Result_label">
+               <property name="font">
+                <font>
+                 <pointsize>12</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>Checks</string>
+               </property>
+              </widget>
+             </item>
             </layout>
            </widget>
           </item>
@@ -1578,6 +1552,39 @@
       </layout>
      </widget>
     </item>
+    <item row="1" column="1">
+     <spacer name="horizontalSpacer">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>944</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="2">
+     <spacer name="verticalSpacer">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>1012</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_4">
+      <property name="text">
+       <string>© 2026 Ashkam Energy Pvt. Ltd. All rights reserved.</string>
+      </property>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -1585,7 +1592,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1013</width>
+     <width>1010</width>
      <height>21</height>
     </rect>
    </property>
